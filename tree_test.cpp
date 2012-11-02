@@ -9,7 +9,6 @@ int main() {
   bst->insert(3);
   bst->insert(2);
   bst->insert(7);
-  //bst->insert(12);
 
   bst->print();
 
@@ -19,5 +18,23 @@ int main() {
   bst->print();
 
   std::cout << std::endl;
- 
+  
+  bst->breadthPrint();
+  
+  delete bst;
+
+  BST<std::string>* str = new BST<std::string>();
+  
+  str->insert("A");
+  str->insert("Z");
+  str->insert("J");
+  str->insert("E");
+  str->insert("D");
+  str->insert("C");
+  str->insert("B");
+  str->insert("Q");
+  
+  str->breadthPrint();
+  
+  delete str;
 }
